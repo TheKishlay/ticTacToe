@@ -1,3 +1,42 @@
 body{
-    background-color: blueviolet;
+    background-image: linear-gradient(to bottom right, black, rgb(66, 5, 66));
+    height: 100vh;
+    color: rgb(238, 235, 240);
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 65vh;
+    width: 65vh;
+    margin: auto;
+}
+
+.cell{
+    border: 2px solid rgb(179, 240, 237);
+    font-size: 18vh;
+    text-align: center;
+}
+
+.statusDiv{
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 24px;
+}
+
+.welcomeScr{
+    position: absolute;
+    display: flex;              /*flex*/
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+footer{
+    text-align: center;
+    margin-top: 24px;
 }
