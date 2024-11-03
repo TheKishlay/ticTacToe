@@ -119,11 +119,9 @@ function game(){
                     yCount = 0;
                     break;
                 }
-
             }
         };
     };
 };
 
 let Game = game();
-console.log("start!");
