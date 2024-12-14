@@ -2,15 +2,61 @@ body{
     background-image: linear-gradient(to bottom right, black, rgb(66, 5, 66));
     height: 100vh;
     color: rgb(238, 235, 240);
+    padding: 0;
+    margin: 0;
+
 }
 
 .board{
     display: grid;
+    height: 70vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3,1fr);
-    height: 65vh;
-    width: 65vh;
+    aspect-ratio: 1 / 1;
     margin: auto;
+}
+
+.outer {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.popup {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 11, 11);
+    width: 366px;
+    height: 222px;
+    border-radius: 26px;
+    text-align: center;
+    transition: all 0.5s ease;
+    transition-duration: 1s;
+}
+
+button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 77px;
+    border: none;
+    transition-duration: 0.5s;
+    font-size: 17px;
+}
+
+button:hover {
+    background-color: rgb(113, 140, 139);
+    color: white;
+    /* transition-delay: 0.4s; */
+}
+
+.far.fa-check-circle {
+    color: blue;
+    font-size: 37px;
+    margin-top: 7px;
 }
 
 .cell{
@@ -20,6 +66,8 @@ body{
 }
 
 .statusDiv{
+    display: flex;
+    justify-content: space-evenly;
     letter-spacing: 4px;
     text-align: center;
     padding: 24px;
@@ -32,12 +80,13 @@ body{
     justify-content: center;
     text-align: center;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: black;
 }
 
 footer{
+    display: flex;
     text-align: center;
     margin-top: 24px;
 }

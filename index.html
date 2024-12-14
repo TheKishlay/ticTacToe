@@ -9,26 +9,26 @@
 </head>
 <body>
     
-    <div class="statusDiv">Status: <span id="status"></span>
+    <div class="statusDiv">Status: </span>
     </div>
 
     <div class="welcomeScr">
         <h1>Welcome to the game!</h1>
-        <button id="startBtn">Start Game</button>
+        <button id="startBtn" autofocus>Start Game</button>
     </div>
 
     <dialog class="playerForm">
         <fieldset>
             <label for="playerOne">Player One name:</label>
-            <input type="text" name="playerOne" id="playerOne" placeholder="Player One" required>
+            <input type="text" name="playerOne" id="playerOne" placeholder="Player One" autocomplete="off" required/>
 
             <label for="playerTwo">Player Two name:</label>
-            <input type="text" name="playerTwo" id="playerTwo" placeholder="Player Two" required>
+            <input type="text" name="playerTwo" id="playerTwo" placeholder="Player Two" autocomplete="off" required/>
         </fieldset>
         <button id="formBtn" type="submit">Start</button>
     </dialog>
 
-    <main>
+    <main class="main">
         <div class="board">
             <div class="cell 1" id="1"></div>
             <div class="cell 2" id="2"></div>
@@ -42,8 +42,19 @@
         </div>
     </main>
 
+    <div class="outer">
+        <div class="popup">
+            <i class="far fa-check-circle"></i>
+            <h2 id="winnermsg"></h2>
+            <br />
+            <button id="closebtn">Close</button>
+        </div>
+    </div>
+
     <footer>
-        <button id="resetBtn">Restart</button>
+        <button id="restartBtn">Reset board</button>
+        <button id="resetBtn">Reset Game</button>
+        <button id="changeName">Restart Game</button>
 
         <div class="winner"></div>
     </footer>
